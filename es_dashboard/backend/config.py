@@ -1,0 +1,6 @@
+import os
+
+class Config:
+    ELASTICSEARCH_HOST = os.environ.get('ELASTICSEARCH_HOST', 'localhost')
+    ELASTICSEARCH_PORT = os.environ.get('ELASTICSEARCH_PORT', 9200)
+    ELASTICSEARCH_URL = f"http://{ELASTICSEARCH_HOST}:{ELASTICSEARCH_PORT}"
